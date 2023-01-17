@@ -1,0 +1,73 @@
+@font-face {
+    font-family: adeieu ;
+    src: url(./SansSerifBookFLF.otf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    color: cyan;
+}
+
+body , html {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+span {
+    color: blueviolet;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #131419;
+    font-family: adeieu;
+}
+
+.clock {
+    background-color: #131419;
+    height: 120px;
+    width: calc(90% + 5px);
+    text-align: center;
+    line-height: 120px;
+    padding: 0 5px;
+    box-shadow: -3px -3px 7px rgba(225, 225, 225, 0.05),
+                 3px  3px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+}
+
+.clock:hover {
+    transition: all 0.5s;
+    transform: scale(1.1);
+    background-color: blueviolet ;
+}
+
+.clock:hover .display {
+    color: #131419;
+}
+
+.clock .display {
+    font-size: 55px;
+    color: blueviolet;
+    letter-spacing: 5px ;
+}
+
+@media screen and (max-width: 400px) {
+    .clock .display {
+        font-size: 35px;
+    }
+}
